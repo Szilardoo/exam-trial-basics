@@ -10,3 +10,12 @@ pirates = [
 # And returns a list of names containing the pirates that
 # - have wooden leg and
 # - have more than 15 gold
+
+def rich_pirate_finder(alist):
+    names = []
+    for elements in alist:
+        if elements['has_wooden_leg'] == True and elements['gold'] > 15:
+            names.append(elements['Name'])
+    return names
+
+print(rich_pirate_finder(pirates))
